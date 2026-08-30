@@ -210,8 +210,8 @@ smart-agriculture/
 ### 1. Clone & set up the backend
 
 ```bash
-git clone https://github.com/yadavshruti6/smart-agriculture.git
-cd smart-agriculture
+git clone https://github.com/yadavshruti6/AgriSense-AI.git
+cd AgriSense-AI
 
 python -m venv venv
 source venv/bin/activate      # Windows: .\venv\Scripts\Activate.ps1
