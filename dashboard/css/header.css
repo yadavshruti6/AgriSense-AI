@@ -111,24 +111,25 @@
 /* Weather Widget */
 .weather-widget {
     width: auto;
-    min-width: 260px;
+    min-width: 280px;
     height: auto;
-    padding: 10px 14px;
+    padding: 12px 16px;
     gap: 8px;
-    background: linear-gradient(135deg, #1e3a5f, #0f1f3a);
+    background: linear-gradient(135deg, rgba(20, 34, 56, 0.8), rgba(13, 23, 38, 0.9));
     border-radius: var(--radius-lg);
+    border: 1px solid rgba(34, 197, 94, 0.15);
     color: white;
     cursor: default;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .weather-widget:hover {
-    background: linear-gradient(135deg, #1e3a5f, #0f1f3a);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(30, 58, 95, 0.3);
+    background: linear-gradient(135deg, rgba(20, 34, 56, 0.95), rgba(13, 23, 38, 1));
+    border-color: rgba(34, 197, 94, 0.3);
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.15);
 }
 
 .weather-widget:active {
@@ -143,8 +144,8 @@
 }
 
 .weather-widget-top i {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.3rem;
+    color: var(--accent-green);
 }
 
 .weather-widget-primary {
@@ -204,25 +205,16 @@
     opacity: 0.88;
 }
 
-/* Theme Toggle */
-.theme-toggle {
-    font-size: 1.1rem;
-}
-
-[data-theme="dark"] .theme-toggle i::before {
-    content: '\f185';
-}
-
 /* Notifications */
 .notification-badge {
     position: absolute;
-    top: 6px;
-    right: 6px;
-    min-width: 18px;
-    height: 18px;
+    top: 4px;
+    right: 4px;
+    min-width: 20px;
+    height: 20px;
     background: var(--accent-red);
     color: white;
-    border-radius: 9px;
+    border-radius: 10px;
     font-size: 0.65rem;
     font-weight: 700;
     display: flex;
@@ -230,24 +222,43 @@
     justify-content: center;
     padding: 0 4px;
     border: 2px solid var(--header-bg);
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    color: var(--accent-green);
+}
+
+[data-theme="dark"] .theme-toggle i::before {
+    content: '\f185';
 }
 
 /* Profile */
 .profile-avatar {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: var(--accent-green);
+    background: linear-gradient(135deg, var(--accent-green), #16a34a);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     transition: all var(--transition-fast);
+    border: 2px solid rgba(34, 197, 94, 0.3);
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.15);
 }
 
 .profile-dropdown:hover .profile-avatar {
-    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    box-shadow: 0 0 16px rgba(34, 197, 94, 0.3);
+    border-color: var(--accent-green);
 }
 
 /* Profile Dropdown Menu */
